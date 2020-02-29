@@ -1,0 +1,166 @@
+.service {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-align: center;
+  height: 70vh;
+  margin-bottom: 4em;
+
+  &-title {
+    margin-top: -4em;
+    padding-top: 6em;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary, 0.9),
+        rgba($primary, 0.9)
+      ),
+      url(../img/services-2.jpg);
+    clip-path: polygon(0 0, 100% 0, 100% 61%, 0% 100%);
+    background-size: cover;
+    height: 60vh;
+
+    width: 100%;
+
+    text-align: left;
+    span {
+      display: block;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.6rem;
+      color: rgba(#fff, 0.5);
+    }
+    .text {
+      animation: texts 4s 1;
+    }
+
+    .span {
+      animation: texts 3s 1;
+    }
+  }
+  .heading-2 {
+    position: relative;
+    font-size: 3rem;
+    animation: btn 2s 1;
+    color: $dark;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.3em;
+      left: 0.1em;
+
+      width: 2em;
+      height: 5px;
+      background-color: rgba($dark, 0.3);
+    }
+  }
+
+  i {
+    color: $primary;
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1em;
+  }
+  img {
+    margin-bottom: 1.6em;
+  }
+  &-grid {
+    display: grid;
+    position: relative;
+    z-index: 6666;
+    margin-top: -15em;
+    grid-gap: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    &-block {
+      transition: all 0.5s;
+      padding: 2em;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 10px 20px 100px 0px rgba(#000, 0.5);
+      border-top: 6px solid $dark;
+      &:nth-child(1) {
+        animation: texts 0.5s 1;
+      }
+
+      &:nth-child(2) {
+        animation: texts 1s 1;
+      }
+
+      &:nth-child(3) {
+        animation: texts 1.5s 1;
+      }
+
+      h3 {
+        color: $dark;
+      }
+    }
+  }
+}
+
+.between {
+  height: 70vh;
+  position: relative;
+  figcaption {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba($dark, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 4em;
+
+    .heading-2 {
+      background-color: rgba($dark, 0.7);
+      color: #fff;
+      padding: 0.5em 1em;
+      padding-right: 3em;
+      animation: btn 5s 1;
+      clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+      box-shadow: 2px 10px 15px rgba(#000, 0.5);
+    }
+
+    a {
+      animation: btn 3s 1;
+    }
+  }
+
+  margin-bottom: 4em;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@keyframes btn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes texts {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

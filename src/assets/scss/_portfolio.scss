@@ -1,0 +1,46 @@
+.portfolio-left {
+  height: 80vh;
+  background-image: linear-gradient(rgba(#1c1d26, 0.5), rgba(#1c1d26, 0.5)),
+    url(../img/about.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  justify-items: left;
+
+  .heading-1 {
+    color: #fff;
+    margin-bottom: 1.5em;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 1.5em;
+      border-radius: 50px;
+      background-color: rgba($primary, 0.8);
+      border-radius: 20px;
+    }
+  }
+
+  &-block {
+    width: 35%;
+    padding: 3em;
+    justify-self: right;
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(#1c1d26, 0.8);
+    border-left: 5px solid $primary;
+
+    .bold {
+      color: #fff;
+      margin-bottom: 1em;
+    }
+  }
+}

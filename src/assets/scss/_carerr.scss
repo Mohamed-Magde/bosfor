@@ -1,0 +1,52 @@
+.carerrList {
+  height: 40vh;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  color: #fff;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($dark, 0.9),
+      rgba($dark, 0.9)
+    ),
+    url(../img/services-2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    &-num {
+      display: flex;
+    }
+
+    &-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1em;
+    }
+    span {
+      font-size: 2.5rem;
+      margin-right: 0.1em;
+    }
+
+    .plus {
+      font-size: 3rem;
+      display: block;
+    }
+    i {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+  }
+}

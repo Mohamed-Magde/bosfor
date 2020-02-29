@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./assets/scss/main.css";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/landing-components/Footer";
+import Landing from "./components/layout/Landing";
+import HairBlog from "./components/layout/blogs/hairblogs/HairBlog";
+import ToothBlog from "./components/layout/blogs/ToothBlog";
+import BodyBlog from "./components/layout/blogs/BodyBlog";
+import HairThird from "./components/layout/blogs/hairblogs/HairThird";
+import HairSecond from "./components/layout/blogs/hairblogs/HairSecond";
+import HairTFourth from "./components/layout/blogs/hairblogs/HairTFourth";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/hair" component={HairBlog} />
+          <Route path="/secondHair" component={HairSecond} />
+          <Route path="/thirdHair" component={HairThird} />
+          <Route path="/fourthdHair" component={HairTFourth} />
+          <Route path="/tooth" component={ToothBlog} />
+          <Route path="/body" component={BodyBlog} />
+        </Switch>
+        <Footer />
+      </Fragment>
+    </Router>
   );
 }
 

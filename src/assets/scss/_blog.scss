@@ -1,0 +1,111 @@
+.header-blog {
+  margin-top: 10vh;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 4em;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    justify-content: flex-start;
+
+    .heading-1 {
+      font-size: 5rem;
+      color: #fff;
+    }
+
+    i {
+      font-size: 4rem;
+      margin-top: 1em;
+      color: #fff;
+    }
+  }
+  figure {
+    img {
+      max-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.blog-wrapper {
+  background-image: url(../img/bg.svg);
+  background-color: $dark;
+  color: #eeeeee;
+}
+
+.blog {
+  &-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    .heading-2 {
+      color: #fff;
+      margin-bottom: 0.5em;
+      &::after {
+        display: none;
+      }
+    }
+    &-name {
+      width: 70%;
+      margin: 0 auto;
+      text-align: right;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-text {
+      background-color: #fff;
+      color: darken($color: $light-grey, $amount: 35);
+
+      &-content {
+        padding-right: 3em;
+        padding-left: 2em;
+        padding-bottom: 3em;
+        position: relative;
+
+        line-height: 1.5;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -0.3em;
+          left: 20%;
+          height: 2px;
+          width: 50%;
+          border-radius: 50px;
+          background-color: rgba($dark, 0.8);
+          border-radius: 20px;
+        }
+        span {
+          font-size: 2rem;
+          color: $dark;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          display: block;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .blog-block-name {
+        margin-top: 8em;
+      }
+      .blog-block-text {
+        padding-top: 6em;
+      }
+    }
+  }
+}

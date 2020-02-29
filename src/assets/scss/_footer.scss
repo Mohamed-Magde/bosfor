@@ -1,0 +1,15 @@
+.footer {
+  padding-bottom: 4em;
+  background-color: $dark;
+  color: #fff;
+  padding-top: 4em;
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    a {
+      color: grey;
+    }
+  }
+}

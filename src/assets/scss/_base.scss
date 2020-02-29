@@ -1,0 +1,129 @@
+$primary: #31b0d5;
+$secondary: #0065b1;
+$dark: #002144;
+$light-grey: #e4e9ed;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.7;
+  color: $dark;
+  background-color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+// typography
+.heading-1 {
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  color: $dark;
+}
+
+.heading-2 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 0em;
+
+  color: $dark;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.3em;
+    left: 0;
+    height: 4px;
+    width: 1.5em;
+    border-radius: 50px;
+    background-color: rgba($dark, 0.8);
+    border-radius: 20px;
+  }
+}
+
+.heading-3 {
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+///
+.btn-primary {
+  color: #fff;
+  background-color: $primary;
+  padding: 0.8em 2em;
+  margin-top: 2.5em;
+  border-radius: 10px;
+  transition: all 0.5s;
+  border: 1px solid $primary;
+
+  &:hover {
+    color: $primary;
+    border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(#000, 0.25);
+  }
+}
+
+.btn-secondary {
+  color: $dark;
+  background-color: transparent;
+  padding: 0.8em 2em;
+  margin-top: 2.5em;
+  display: block;
+  transition: all 0.5s;
+  border: 2px solid $dark;
+  border-radius: 10px;
+
+  &:hover {
+    color: #fff;
+    border: 2px solid $primary;
+    background-color: $primary;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(#000, 0.25);
+  }
+}
+
+.heading-4 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-bottom: 1em;
+  color: #fff;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.3em;
+    left: 0;
+    height: 2px;
+    width: 2em;
+    background-color: rgba($primary, 0.5);
+    border-radius: 20px;
+  }
+}
